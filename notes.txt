@@ -1,0 +1,89 @@
+Youtube Lectures
+
+https://www.youtube.com/watch?v=mjv07O7FO0E&list=PL8p2I9GklV47BCAjiCtuV_liN9IwAl8pM&index=5
+
+
+
+
+S C:\Users\UZAIR\Desktop\react-uzair\uzair> node -v
+v20.11.1
+
+PS C:\Users\UZAIR\Desktop\react-uzair\uzair> npm -v
+10.4.0
+
+to make folder 
+mkdir react-tut
+
+to enter in the folder 
+cd react-tut
+
+
+npx also store with npm 
+
+
+to install application 
+
+PS C:\Users\UZAIR\Desktop\react-uzair> npx create-react-app uzair
+
+PS C:\Users\UZAIR\Desktop\react-uzair\> cd uzair
+
+PS C:\Users\UZAIR\Desktop\react-uzair\uzair> code . (enter)
+
+
+PS C:\Users\UZAIR\Desktop\react-uzair\uzair> npm start
+
+> uzair@0.1.0 start  
+> react-scripts start
+
+
+NPM is node package Management 
+
+how to install package 
+
+> npm install package-name
+
+
+** NPM alternative Yarn
+
+
+npm i react validation 
+
+npm audit fix --force
+
+
+
+
+dated = 15.04.2024 ---- started working frmo lec 15
+
+dated = 17 .04.2024 -- completed LEC 17 and revised 
+
+dated = 17 .04.2024 -- completed LEC 18 and revised 
+
+dated 19.04.2024 --  completed LEC 20 and revised 
+
+dated 23.04.2024 -- doing LEC 21   what is life cycle method. Three phases are birt, childhood/ Load Product , Young/ Update Product, Death / Remove Product 
+
+dated 24.04.2024 ---  LEC # 22 --- 
+
+dated 24.04.2024 -- LEC # 23 
+
+dated 24.04.2024 ---  LEC # 24 Done
+
+dated 25.04.2024. --- LEC # 25 Done 
+
+dated 7-5-2024 -- -Lec # 30 Done 
+
+dated 8-5-2024 -- -Lec # 31 Done 
+
+dated 9-5-2024 ---- lec # 34 and 35 Done 
+
+dated 13-5-2024 ---- lec # 37 and 38 done 
+
+dated 20.05.2024 --------- #4 Dynamic
+
+
+dated 21.05.2024 -------- #58 React Router complete -- Red series 
+                           Video  # 62 Dynamice Routing  
+
+dated 22.05.2024 ---------# 54 Delete Mehod in Reac API
+

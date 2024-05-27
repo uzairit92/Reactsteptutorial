@@ -1,0 +1,2591 @@
+
+
+/
+
+
+
+React tutorial in Hindi #4 Hello world | Make first file
+
+Yarn is alternative of react
+
+
+
+React tutorial in Hindi #5 File and folder structure
+File and folder use structure
+
+
+#6 Package.json in Details
+React tutorial in Hindi 
+
+package have all the details, 
+version, important file is package.json
+node modules get higher in size by time.
+routing 
+validation 
+component in react 6 or 7 types 
+
+// # 6--------------------------------------------------------------------------------------------
+// # single file 
+// # how functino show hello on the screen without any other file 
+
+
+import logo from './logo.svg';
+import './App.css';
+
+
+function department(){
+  return (
+    <div className='department'>
+      <h1> Hello Pakistan </h1>
+      <h1>Islamabad is the capital of Pakistan </h1>
+    </div>
+  )
+};
+export default (department);
+
+
+// for practice 
+import logo from './logo.svg';
+import './App.css';
+
+
+function App(){
+  return (
+    <div className='App'>
+      <h1> Hello Pakistan </h1>
+      <h1>Islamabad is the capital of Pakistan </h1>
+    </div>
+  )
+};
+export default (App);
+
+
+
+# 7--------------------------------------------------------------------------------------------
+# Two Files  file 
+# Component can be Header , Footer , Main content , SideNAV, SideNAV 
+# Component type , Functional , Class, Hight order Component, pure, controlled component, Un controlled component 
+#7 functional Component | what is component
+React tutorial in Hindi 
+
+component Header, Footer is best example.
+
+Functional component
+class component
+HOC Hight oreder component 
+Pure component
+controlled / uncontrolled component
+
+// # 7  functional Component 
+// first made a component in User file then call it in another file as import 
+
+// can also write --- export function User(){} --- and delte the end line of export default User:  
+function Userss () {
+    
+    return (
+        <div>
+            <h1>User Component</h1>
+        <h1>Hello </h1>
+        </div>
+    )
+}
+export default Userss; 
+
+
+
+// App.js file  code 
+
+// import logo from './logo.svg';
+// import './App.css';
+// import User from './User'
+
+
+
+// function department(){
+//     return (
+//       <div className='department'>
+//         <h1> Hello Pakistan </h1>
+//         <h1>Islamabad is the capital of Pakistan </h1>
+//         <User/>
+//         <User/>
+//         <User/>
+//         <User/>
+//         <User/>
+//         <User/>
+//       </div>
+//     )
+//   };
+//   export default (department);
+
+
+# 7 App.js File
+
+import logo from './logo.svg';
+import './App.css';
+import Userss from './User'
+
+
+
+function department(){
+  return (
+    <div className='department'>
+      <h1> Hello Pakistan </h1>
+      <h1>Islamabad is the capital of Pakistan </h1>
+      <Userss/>
+      <Userss/>
+      <Userss/>
+    
+    </div>
+  )
+};
+
+// function Userss () {
+//   return (
+//       <div>
+//           <h1>User Component</h1>
+//       <h1>Hello </h1>
+//       </div>
+//   )
+// }
+export default (department);
+
+#8 Class Component
+can be used many times can be made in same calss and also in another file 
+
+React tutorial in Hindi 
+
+
+//LEC # 8
+
+import logo from './logo.svg';
+import './App.css';
+
+import React from 'react';
+import { Component } from 'react';
+// import Staff from './Staff';
+import User from './User'
+
+
+
+function department(){ 
+  return (
+    <div className='department'>
+      <h1> Welcome to React: Saaay ALLAH HO AKBAR </h1>
+      <User/>
+      {/* <Staff/> */}
+    
+    </div>
+  )
+};
+
+
+export default department;
+
+/LEC # 8
+
+import logo from './logo.svg';
+import './App.css';
+
+import React from 'react';
+import { Component } from 'react';
+
+
+
+function department(){ 
+  return (
+    <div className='department'>
+      <h1> Welcome to React: Saaay ALLAH HO AKBAR </h1>
+      <User/>
+    
+    </div>
+  )
+};
+
+class User extends Component
+{
+  render()
+      {
+          return (
+              <h1>Hello from Class Component lec #8</h1>
+          )
+      };
+  
+};
+
+export default department;
+
+//LEC # 10
+// #10 Click event and function in ReactJs
+
+import logo from './logo.svg';
+import './App.css';
+import React from 'react';
+
+
+// this below hello run before any thing appear on screen
+// alert("Hello")
+
+function App(){ 
+
+  let data  = "anil Sindhu";
+
+  function dataa()
+  {
+    data = "peter";
+  }
+  function apple()
+  {
+    alert("Function called ")
+  }
+  return (
+    <div className='App'>
+      <h1> Welcome to React: Click event and function in ReactJs </h1>
+      {/* // below line take output from let data line 19 */}
+      <h1>{data}</h1>
+      {/* // below function run automatically before page show any thing */}
+      {/* <button onClick={apple("Hello ")}>  Click Me  </button> */}
+      
+      <button onClick={()=>alert("Hello ")}>  Click Me  </button>
+      <br></br>
+      <br></br>
+      {/* // we cann called above apple function on buttion like this below */}
+      <button onClick={apple}>  Click Me  </button>
+      <br></br>
+      <br></br>
+      <button onClick={apple}>  Click Me  </button>
+
+    </div>
+  )
+};
+// export default App;
+
+
+#10 Click event and function in ReactJs
+
+Click Event and Functional
+call function inthe bution click 
+
+variable in functional component
+//------------------- # Lec 10
+
+// import User from './User'
+// import Userclass from './Userclass'
+// import Userjsx from './Userjsx'
+
+// -------------
+// function App() {
+//   let data = "anil Sindhu";
+
+//   //-- this a function made within a function
+//   // function Apple() {
+//   //   return (<div>Apple Component </div>)
+//   // }
+
+//   // function App()
+
+//   function apple() {
+//     data = "peter";
+//     // alert(data);
+//     alert("function called");
+//   }
+
+//   return (
+//     <div className="App">
+
+//       <h1>Hello World & {data} </h1>
+//       {/* <button onClick={apple()}>Click Me</button> */}
+
+//       {/* <button onClick={() => alert("Hello")}>Click Me</button> */}
+//       {/* // below and above both have two different functions */}
+//       <button onClick={() => apple()}>Click Me</button>
+
+//       <User />
+//       <User />
+//       <Userclass />
+//       this is also a way to show Component in a component
+//       {/* {Apple()} */}
+//       {/* <Apple /> */}
+//       <Userjsx />
+
+
+//     </div>
+//   );
+// }
+
+// # ---------------------LEC 11
+// function App() {
+//   let data = "anil";
+
+//   function updateData() {
+//     data = "Sindhu";
+//     alert(data)
+//   }
+//   console.warn
+//   return (
+//     <div className="App">
+
+//       <h1>State in React</h1>
+
+//       <h1>{data}</h1>
+
+//       <button onClick={updateData}>Update Data</button>
+//     </div>
+//   );
+// }
+
+// export default App;
+
+//LEC # 10
+// #10 Click event and function in ReactJs
+
+import logo from './logo.svg';
+import './App.css';
+import React from 'react';
+
+
+// this below hello run before any thing appear on screen
+// alert("Hello")
+
+function App(){ 
+
+  let data  = "anil Sindhu";
+
+  function dataa()
+  {
+    data = "peter";
+  }
+  function apple()
+  {
+    alert("Function called ")
+  }
+  return (
+    <div className='App'>
+      <h1> Welcome to React: Click event and function in ReactJs </h1>
+      {/* // below line take output from let data line 19 */}
+      <h1>{data}</h1>
+      {/* // below function run automatically before page show any thing */}
+      {/* <button onClick={apple("Hello ")}>  Click Me  </button> */}
+      
+      <button onClick={()=>alert("Hello ")}>  Click Me  </button>
+      <br></br>
+      <br></br>
+      {/* // we cann called above apple function on buttion like this below */}
+      <button onClick={apple}>  Click Me  </button>
+      <br></br>
+      <br></br>
+      <button onClick={apple}>  Click Me  </button>
+
+    </div>
+  )
+};
+// export default App;
+
+
+//LEC # 11
+// #11 State with functional component
+
+import logo from './logo.svg';
+import './App.css';
+import { useState } from 'react'
+
+
+function App(){ 
+
+  const [data, setData]= useState(0)
+
+  function updateData()
+  {
+    // setData = "Ahmed"
+    setData (data +1)
+  }
+
+  console.warn("___________");
+  return (
+    <div className='App'>
+      <h1>{data}</h1>
+      <button onClick={updateData}>  Update Data  </button>
+    </div>
+  );
+}
+
+
+// export default App;
+
+// function App(){ 
+
+//   const [data, setData]= useState("Uzair")
+
+//   function updateData()
+//   {
+//     // setData = "Ahmed"
+//     setData ("Ahmed")
+//   }
+
+//   console.warn("___________");
+//   return (
+//     <div className='App'>
+//       <h1>{data}</h1>
+//       <button onClick={updateData}>  Update Data  </button>
+//     </div>
+//   );
+// }
+
+
+// export default App;
+
+
+// # 12 State with Class Component
+
+import logo from './logo.svg';
+import React, { Component } from 'react'
+import './App.css';
+
+
+class App extends Component {
+  constructor() {
+    // super is the javascript functionality 
+    super();
+    this.state = {
+      // data: "anil"
+      data: 1
+    }
+  }
+  apple() {
+    // alert("apple")
+    //--- below setState line will change the anil name to Sidhu 
+    // this.setState({ data: "Sidhu" })
+    //--- below line will run with date : 1 command
+    this.setState({ data: this.state.data + 1 })
+  }
+
+  render() {
+
+    return (
+      <div className="App" >
+        <h1>{this.state.data} </h1>
+        <button onClick={() => this.apple()}>Update Data</button>
+      </div>
+    );
+  };
+};
+
+// export default App;
+
+// # 12 State with Class Component
+
+import React, { Component } from 'react'
+import './App.css';
+
+
+class App extends Component {
+
+  constructor()
+  {
+    super();
+    this.state=
+    {
+      data: "anil",
+      data1: "uzair"
+    }
+  }
+  apple()
+  {
+    this.setState({data: "Sidhu "})
+    this.setState({data1: "Khan"})
+  }
+  render() 
+  {
+    return (
+      <div className="App" >
+        <h1>Hello World: State with class componant </h1>
+
+        <h1>{this.state.data}, {this.state.data1} </h1>
+        <h1>{} </h1>
+        {/* // with writing this aplle alert will automaticallyl run and show on scree */}
+        {/* <button onClick={this.apple()}>Update Button</button> */}
+        // it will work with click on button
+        <br></br>
+        <button onClick={()=>this.apple()}>Update Button</button>
+        {/* <button onClick={()=>this.apple()}>Update Button</button> */}
+      </div>
+    )
+  }
+}
+
+// export default App;
+
+
+
+
+/// #13 Props with functional component Student.js File
+
+
+function  Student (props) {
+
+  console.log(props.name)
+      return (
+
+          <div style={{backgroundColor: "Skyblue", margin: 10}}>
+              <h1>  Student Component </h1>
+              <h2>  Hello {props.name} </h2>
+              {/* <h2>  Email: {props.email} </h2>
+              <h4>  Address : {props.others.address} </h4> */}
+
+          </div>
+      )
+  }
+export default Student;
+
+// Lec 13
+
+import logo from './logo.svg';
+import React, { useState } from 'react'
+import './App.css';
+import Student from './Student'
+
+
+function App() {
+
+const [name, setName] = useState("Anil")
+
+  return (
+    <div className="App" >
+      <h1>#13 Props with functional component</h1>
+      <Student name={name} />
+
+      {/* <Student name = {"Anil"} email = "anil@test.com" others = {{address: 'delhi', mobile:"000"}}/> */}
+
+      {/* <Student name = {"Peter"} email = "Peter@test.com" others = {{address: 'Lahore', mobile:"111"}}/>
+
+      <Student name = {"Prety"} email = "prety@test.com" others = {{address: 'Multan', mobile:"222"}}/> */}
+
+      {/* <button onClick={() => { setName("Sidhu") }}>Update Data</button> */}
+      {/* <Student name={"peter"} email="peter@test.com" other={{ address: 'Multan', mobile: "111" }} /> */}
+      {/* <Student name={"priti"} email="priti@test.com" other={{ address: 'Sahiwal', mobile: "222" }} /> */}
+
+      <button onClick={() => {setName ("Sindhu")}}> Update Name </button>
+    </div>
+  );
+};
+
+export default App;
+
+
+// -- LEC # 14 --------------two files are used in this leces  studend.js and app.js
+
+// Lec 14 - Student.js file 
+
+import React from 'react'
+
+
+export default class Student extends React.Component {
+
+    render() {
+
+        console.log(this.props)
+        return (
+            <div style={{ backgroundColor: 'Skyblue', margin: 20 }}>
+
+                <h1> Hello {this.props.name}</h1>
+                <h3>{this.props.email}</h3>
+
+            </div>
+        )
+    }
+}
+// this can also be used as above at line 6
+// export default Student;
+
+
+
+
+// Lec 14
+
+// function Student(props) {
+
+//     // console.warn(props.name)
+//     console.log(props)
+//     return (
+//         <div style={{ backgroundColor: "skyblue", margin: 1 }}>
+//             <h1>Student Component </h1>
+//             <h1>Hello {props.name}</h1>
+//             {/* <h2>Email :  {props.email}</h2> */}
+//             {/* <h4>Address :  {props.other.address}</h4> */}
+
+//         </div >
+
+//     )
+// }
+
+// export default Student;
+
+
+
+
+// Lec 14 App.js files is below under;  
+
+import logo from './logo.svg';
+import './App.css';
+import Student from './Student'
+
+import React from 'react'
+
+class App extends React.Component {
+
+  constructor() {
+    super();
+    this.state = {
+      name: "Anil"
+    }
+  }
+  render() {
+    return (
+      <div className="App" >
+        <h1>Props in React with class  </h1>
+        <Student name={this.state.name} email="anil@test.com"></Student>
+        <button onClick={() => this.setState({ name: "Sindhu" })}> Update Name</button>
+      </div >
+    );
+  }
+};
+
+// export default App;
+
+
+
+
+// // Lec 14
+
+// import logo from './logo.svg';
+// import React, { useState } from 'react'
+// import './App.css';
+// import Student from './Student'
+
+
+// function App() {
+
+
+//   return (
+//     <div className="App" >
+//       <h1>Props in React with class  </h1>
+//       {/* // both are the ways below can be used to */}
+//       <Student name="Anil" email="anil@test.com"></Student>
+//       {/* <Student /> */}
+//       {/* // reuse of command */}
+//       <Student name="peter" email="peter@test.com"></Student>
+//       <button onClick={() => { setName("Sidhu") }}>Update Name</button>
+//     </div>
+//   );
+// };
+
+// export default App;
+
+
+
+
+
+// --------LEC # 15
+
+//-------- #15 Get Input box value
+
+
+import logo from './logo.svg';
+import './App.css';
+import React, {useState } from 'react';
+
+function App(){
+
+// below data is our state 
+  const [data, setData] = useState(null)
+  const [print, setPrint] = useState(false)
+
+  function getData(val)
+  {
+    console.warn(val.target.value)
+    setData(val.target.value)
+    // to hide value 
+    // setPrint(false)
+
+  }
+
+  return (
+    <div className='App'>
+      {
+        print?
+        <h1>{data}</h1>
+        :null
+      }
+      <h1>Get Input box value Below   </h1>
+      <h2>{data}</h2>
+      < input type = "text"  onChange = {getData} />
+      <button onClick={()=>setPrint (true)}>Print Data </button>
+    </div>
+  );
+};
+export default (App);
+
+
+
+/--------------------LEC # 16
+// //-------- #16 Hide , Show and Toggle in ReactJs
+
+import logo from './logo.svg';
+import './App.css';
+import React from 'react'
+
+
+function App() {
+
+  const [status, setStatus] = React.useState(false)
+
+
+  return (
+    <div className="App" >
+      <h1>Hide , Show and Toggle in ReactJs  </h1>
+
+      {
+        status ?
+          <h1>Hello World</h1> : null
+      }
+      
+      {/* hide and show with two buttons */}
+      <button onClick={() => setStatus(false)} > Hide</button>
+      <br></br>
+      <br></br>
+      <button onClick={() => setStatus(true)} > Show</button>
+      <br></br>
+      <br></br>
+      <button onClick={() => setStatus(!status)} > Toggle</button>
+    </div >
+  );
+};
+
+export default App;
+
+
+
+// //-------- #17 Handle Form | checkbox | input field | select
+
+import './App.css'; 
+import React ,{useState} from 'react';
+
+function App(){
+
+  const [name, setName] = useState();
+  const [classname, setClassname] = useState(true);
+  const [tnc, setTnc] = useState (true);
+
+  function getFromData (e){
+    console.warn(name, classname, tnc)
+    e.preventDefault()
+  }
+  return (
+    <div className='App'>
+<h2>Handle Form - Checkbox - inputfield / select </h2>
+  <form onSubmit={getFromData}>
+            <input type='text' name='text' placeholder='enter text' onChange={(e)=> setName(e.target.value)}/> <br></br>
+            <br></br>
+            <select onChange={(e) => setClassname(e.target.value)}>
+              <option>Select Class</option>
+              <option>Science</option>
+              <option>Math</option>
+              <option>Computer</option>
+              <option>Urdu</option>
+          </select>
+              <br></br>
+              <br></br>
+            <input type='checkbox' name='name' onChange={(e) => setTnc(e.target.checked)}/> <span>Terms and Condition</span>
+            <br></br>
+          <button>Submit</button> <br></br>
+    </form>
+       </div>
+  );
+}
+
+export default App;
+
+
+
+
+
+// // //-------- #17 Handle Form | checkbox | input field | select
+
+// import logo from './logo.svg';
+// import './App.css';
+// // import React from 'react'
+// // above "react" and below "useState "both can be used 
+
+// import { useState } from 'react';
+
+// function App() {
+
+//   const [name, setName] = useState("");
+//   const [tnc, setTnc] = useState(false);
+//   const [interest, setInterest] = useState("");
+
+//   function getFormData(e) {
+//     console.warn(name, tnc, interest)
+//     e.preventDefault()
+//   }
+//   return (
+//     <div className="App" >
+//       <h1>Handle Form - Checkbox - inputfield / select </h1>
+
+//       <form onSubmit={getFormData}>
+//         <input type="text" placeholder="enter name" onChange={(e) => setName(e.target.value)} /> <br />  <br />
+//         <select onChange={(e) => setInterest(e.target.value)}>
+//           <option>select Options</option>
+//           <option>Marvel</option>
+//           <option>DC</option>
+//         </select><br /> <br />
+
+//         <input type="checkbox" onChange={(e) => setTnc(e.target.checked)} /> <span>Accept Terms and Conditions</span>
+//         <br /> <br />
+
+//         <button type="submit">Submit</button>
+//       </form>
+
+//     </div >
+//   );
+// };
+
+// export default App;
+
+
+// //-------- #18 Conditional Rendring -- app.js
+
+import logo from './logo.svg';
+import './App.css';
+import Profile from './Profile'
+
+function App() {
+
+
+  return (
+    <div className="App" >
+      <h1> Conditional Rendering </h1>
+
+      <Profile />
+
+    </div >
+  );
+};
+// export default App;
+
+// ------------ below  Prifile.js 
+// LEc 18
+
+
+import React , { useState } from 'react'
+
+function Profile() {
+    const [loggedIn, setLoggedIn] = useState(3)
+    
+    //1,2,3
+    return (
+        <div>
+               {loggedIn==1?
+               <h1>Welcome user 1  </h1> 
+               :loggedIn==2? <h1>Welcome user 2  </h1> 
+               :<h1>Welcome Guest </h1>}  
+        </div>
+    )
+}
+// the above method is also called tarnary operator 
+// export default Profile;
+
+
+//--------------
+// LEc 18
+// import React , { useState } from 'react'
+
+// function Profile() {
+//     const [loggedIn, setLoggedIn] = useState(true)
+    
+    
+//     return (
+//         <div>
+//                {loggedIn? <h1>Welcome Anil </h1> : <h1>Welcome Guest </h1>}  
+//         </div>
+//     )
+// }
+
+// export default Profile;
+// //--------------
+
+
+// //
+// import React , { useState } from 'react'
+
+// function Profile() {
+//     const [loggedIn, setLoggedIn] = useState(true)
+//     if (loggedIn)
+//     {
+//     return (
+//         <div>
+//                 <h1>Welcome Anil </h1>
+//         </div>
+//     )
+//     }
+//     else 
+//     {
+//         return(
+//             <div>
+//                 <h1>Welcome Guest</h1>
+//             </div>
+//         )
+//     }
+
+// }
+// export default Profile; 
+// //
+
+
+
+
+
+//----------- Profile.js file code 
+
+
+
+import { useState } from 'react'
+
+function Profile() {
+    const [loggedIn, setLoggedIn] = useState(3)
+    // const [loggedIn, setLoggedIn] = useState(false)
+
+    // 1,2,3 
+    return (
+        <div>
+            {loggedIn == 1 ?
+                <h1>Welcome user 1 </h1>
+                : loggedIn == 2 ? <h1>Welcome User 2 </h1>
+                    : <h1>Welcome User 3</h1>}
+
+        </div>
+    );
+
+}
+// export default Profile; 
+
+
+
+
+
+
+
+// ---------------------------
+
+
+import React, { useState } from 'react'
+function Login() {
+    const [user,setUser]=useState("");
+    const [password,setPassword]=useState("");
+    const [userErr,setUserErr]=useState(false);
+    const [passErr,setPassErr]=useState(false);
+
+  function loginHandle(e)
+    {
+        if(user.length<3 || password.length<3)
+        {
+            alert("type correct values")
+        }
+        else
+        {
+            alert("all good :)")
+        }
+
+        e.preventDefault()
+    }
+    function userHandler(e){
+        let item=e.target.value;
+        if(item.length<3 )
+        {
+           setUserErr(true)
+        }
+        else
+        {
+            setUserErr(false)
+        }
+        setUser(item)
+    }
+    function passwordHandler(e){
+        let item=e.target.value;
+        if(item.length<3 )
+        {
+           setPassErr(true)
+        }
+        else
+        {
+            setPassErr(false)
+        }
+        setPassword(item)
+
+    }
+    return (
+        <div>
+            <h1>Login</h1>
+           <form onSubmit={loginHandle}>
+           <input type="text" placeholder="Enter User Id" onChange={userHandler} />{userErr?<span>User Not Valid</span>:""}
+            <br /> <br />
+            <input type="password" placeholder="Enter User Password" onChange={passwordHandler}/>{passErr?<span>Password Not Valid</span>:""}
+
+            <br /> <br />
+            <button type="submit"  >Login</button>
+           </form>
+        </div>
+    )
+}
+
+// export default Login;
+
+
+
+//-----
+// 18.04.2024
+// LEc 18 - 
+
+
+import React , { useState } from 'react'
+
+function Profile() {
+    const [loggedIn, setLoggedIn] = useState(3)
+    
+    //1,2,3
+    return (
+        <div>
+               {loggedIn==1?
+               <h1>Welcome user 1  </h1> 
+               :loggedIn==2? <h1>Welcome user 2  </h1> 
+               :<h1>Welcome Guest </h1>}  
+        </div>
+    )
+}
+// the above method is also called tarnary operator 
+export default Profile;
+
+
+//--------------
+// LEc 18
+// import React , { useState } from 'react'
+
+// function Profile() {
+//     const [loggedIn, setLoggedIn] = useState(true)
+    
+    
+//     return (
+//         <div>
+//                {loggedIn? <h1>Welcome Anil </h1> : <h1>Welcome Guest </h1>}  
+//         </div>
+//     )
+// }
+
+// export default Profile;
+// //--------------
+
+
+// //
+// import React , { useState } from 'react'
+
+// function Profile() {
+//     const [loggedIn, setLoggedIn] = useState(true)
+//     if (loggedIn)
+//     {
+//     return (
+//         <div>
+//                 <h1>Welcome Anil </h1>
+//         </div>
+//     )
+//     }
+//     else 
+//     {
+//         return(
+//             <div>
+//                 <h1>Welcome Guest</h1>
+//             </div>
+//         )
+//     }
+
+// }
+// export default Profile; 
+
+// //
+
+// 18.04.2024
+// LEC 18
+
+import logo from './logo.svg';
+import './App.css';
+import Profile from './Profile'
+
+function App() {
+
+
+  return (
+    <div className="App" >
+      <h1> Conditional Rendering </h1>
+
+      <Profile />
+
+    </div >
+  );
+};
+
+export default App;
+//-----18.04.2024
+
+
+
+// 19.04.2024 App.js
+
+// LEC # 19 --- Basic Form validation ---------------------App.js
+
+import logo from './logo.svg';
+import './App.css';
+import Login from './Login'
+
+function App() {
+
+  const data = true;
+
+  return (
+    <div className="App" >
+      <h1>  LEC # 19 --- Basic Form validation </h1>
+
+      <Login />
+
+    </div >
+  );
+};
+export default App;
+
+
+// dated 19.04.2024 login.js
+// LEC 19 
+// Below code and for practice on Lec 19
+
+import React, {useState} from 'react';
+function Login(e){
+    const [user, setUser] = useState ("");
+    const [password, setPassword] = useState ("");
+    const [userErr, setUserErr] = useState (false);
+    const [passErr, setPassErr] = useState (false);
+    function loginHandle(e){
+        if (user.length<3 || password.lenght <3)
+        {
+           alert("typed corrct values") 
+        }
+        else
+        {
+            alert("all good")
+        }
+        e.preventDefault()
+    }
+    function userHandler(e){
+        let item = e.target.value;
+        if (item.length < 4)
+        {
+            // console.warn("Not Ture")
+            setUserErr(true)
+        }
+        else{
+            setUserErr(false)
+        }
+        // console.warn(e.target.value.lenght)
+        setUser(item)
+    }
+    function passwordHandler (e){
+        let item = e.target.value;
+        if (item.length < 4)
+        {
+            // console.warn("Not Ture")
+            setPassErr(true)
+        }
+        else{
+            setPassErr(false)
+        }
+        // console.warn(e.target.value.lenght)
+        setPassword(item)
+    }
+    return (
+        <div>
+           <h1>Login Form </h1>
+           <form onSubmit={loginHandle}>
+            <input type="text" placeholder='Enter User ID'  onChange={userHandler}/>{userErr? <span> User Not Valid </span>:""}
+            <br/> <br/>
+            <input type='text' placeholder='Enter user Password' onChange={passwordHandler}/> {passErr? <span> Password Not Valid </span>:""}
+            <br/> <br/>
+            <button type='submit'> Submit</button>
+           </form>
+
+        </div>
+    )
+}
+
+export default Login;
+
+//End 19.04.2024
+
+
+
+// # Start File App.js with User.js 19.04.2024
+
+// //-------- LEC #20 Pass Function as Props
+
+import logo from './logo.svg';
+import './App.css';
+import User from './User'
+import Members from './Members'
+
+function App() {
+  function getData() {
+    alert("Hello from app component")
+  }
+  return (
+    <div className="App">
+
+      <User data={getData} />
+      {/* we can repeat above Component */}
+      <User data={getData} />
+//start Members.js 
+      <div style={{ alignContent: "right"}}>
+        <Members data={getData} />
+      </div>
+// end
+      {/* <Student data={getData} /> */}
+    </div>
+  );
+}
+
+export default App;
+
+// User. js run seperately 
+
+// Start - 19.04.2024
+// LEC --- #20 Pass Function as Props
+
+
+// Starts ----------------------- User.js File 
+// Lec # 20 part 1 
+// one way to call the data from app.js file is like written on button
+import React from 'react';
+function User(props) {
+    return (
+        <div>
+            <h1>User Component </h1>
+            {/* Below are the two ways to call the data  */}
+            {/* <button onClick={() => props.data()}>Call data function </button> */}
+               <button onClick={props.data}>Call data Function</button>
+        </div>
+    )
+}
+export default User;
+
+//members.js is a sperate file 
+
+import React from 'react'
+
+
+function Members(props) {
+    return (
+        <div>
+            <h1>Member Component </h1>
+            <button onClick={props.data}>Call data function </button>
+        </div>
+    )
+}
+export default Members;
+
+
+// end 
+
+
+// Start  ---------who to send data from  child to parent 
+
+// //--------  
+import logo from './logo.svg';
+import './App.css';
+function Child ({data, getFromChild}){
+  console.log(data)
+  getFromChild("JavaScript")
+  return <div></div>
+}
+function App() {
+  function getFromChild(data){
+    console.log(data)
+  }
+  return (
+    <div>
+      <Child getFromChild = {getFromChild} data={"deeecode"} />
+    </div>
+  )
+}
+
+export default App;
+//end
+
+
+
+
+
+
+// //-------- #21 Life Cycle Method 
+
+
+// Birth --------------- Middle age ----------------- Death 
+// Mounting -------------updated ------------=-----unmounting
+// Loaded ---------------Updated -------------------waitForElementToBeRemoved. 
+
+// Usage  in class and function component 
+
+// Class Function
+//Fuction used hooks 
+
+
+
+// # ------------------22 Constructors / First life cycle method 
+
+
+// # ------------------22 Constructors / First life cycle method 
+
+import logo from './logo.svg';
+import './App.css';
+import React from 'react'
+// constructor is always called first and then render is called you can see in inspect
+class App extends React.Component {
+  constructor() {
+    // if super s not  called it will give error
+    // to call parent constractor  react.component we call super 
+    super();
+    this.state = {
+      data: "Anil"
+      // we never have to call API here 
+
+      // question can we take probes in constructor. 
+    }
+  }
+
+  render() {
+    return (
+      <h1>Hello World {this.state.data}</h1>
+    )
+  }
+}
+
+export default App;
+
+//start 
+
+// # Start File App.js with User.js 24.04.2024
+
+// //-------- #22 Constructor / First Life Cycle method. 
+
+
+import './App.css'; 
+import React from 'react';
+
+class App extends React.Component {
+    // constructor run before the render and afte constructor is executated it will show the return tags. 
+    constructor()
+    {
+        super();
+        // constructor cant work witout super();
+        // console.warn("Constructor")
+        this.state={
+            data: "Anil"
+        }
+    }
+    render()
+    {
+        return(
+            <h1>Hello World {this.state.data}</h1>
+        )
+    }
+
+}
+
+export default App;
+// end
+
+
+
+/// # Start File App.js with User.js 24.04.2024
+
+// LEC --------------- # 23 Render life cycle method 
+// render means execute and print 
+// when component is ready 
+// when probe is execuate
+
+import logo from './logo.svg';
+import './App.css';
+import React from 'react'
+import User from './User'
+
+// constructor is always called first and then render is called you can see in inspect
+
+function App() {
+  const [name, setName] = React.useState("Anil")
+  return (
+    <div calssName="App">
+        <h1>{name}</h1>
+      <h1> Render Method in React by {name} </h1>
+
+      <button onClick={() => setName("Sidhu")}>Update Name</button>
+      <br></br>
+
+      <User/>
+      
+    </div>
+
+  );
+}
+export default App;
+
+
+// Start - User.js File - 24.04.2024
+// LEC --- #23 Render Life Cycle method. 
+
+
+import React from "react";
+
+class User extends React.Component {
+    constructor() {
+        super();
+        this.state = {
+            email: "anil@test.com"
+        }
+    }
+    render() {
+        console.log("Render method", this.state.email)
+        return (
+            <div>
+            <h1> User Component = {this.state.email }</h1>
+            
+                <button onClick={() => this.setState({ email: "sidhu@test.com" })}>updateEmail Address</button><br></br>
+                <br></br>
+            </div>
+
+        )
+    }
+}
+
+
+export default User;
+
+
+// # Start File App.js with User.js 24.04.2024
+
+// LEC --------------- # 24  componentDidMount life cycle method in ReactJs 
+// render means execute and print 
+// when component is ready 
+// when probe is execuate
+
+import './App.css';
+import React from 'react';
+
+
+class App extends React.Component {
+    constructor()
+    {
+        super()
+        // console.warn("Constructor")
+        this.state = {
+            name: "anil"
+        }
+    }
+
+    componentDidMount()
+    {
+        console.warn("ComponendDidMounth")
+    }
+
+    render ()
+    {
+       
+        console.warn("render")
+       
+        return(
+            <div className='App'>
+                <h1>Component Did MOunt <br></br> {this.state.name}</h1>
+                <button onClick={()=> {this.setState({name: "Sindhu"}) }}> Update Name</button>
+            </div>
+        );
+    }
+}
+export default App;
+//end
+
+
+
+// // LEC --------------- #25 componentDidUpdate life cycle method in ReactJs
+// import './App.css';
+// import React from 'react'
+
+
+// class App extends React.Component {
+//   constructor() {
+//     super();
+//     console.warn("constructor")
+//     this.state = {
+//       count: 0
+//     }
+//   }
+//   componentDidUpdate(preProps, preState, snapshot) {
+//     console.warn("componentDidUpdate", preState)
+//   }
+//   render() {
+//     console.warn("render")
+
+//     return (
+//       <div className="App">
+//         <h1> Component Did Update</h1>
+//         <button onClick={() => { this.setState({ count: this.state.count + 1 }) }}> Update Name</button>
+//       </div>
+//     )
+//   }
+// }
+// export default App;
+
+// # Start File App.js with User.js 24.04.2024
+
+// LEC --------------- # 25   componentDidUpdate life cycle method in ReactJs
+
+
+
+import './App.css';
+import React from 'react';
+
+
+class App extends React.Component {
+    constructor()
+    {
+        super();  
+        console.warn("constructor")
+        this.state = {
+            count: 0
+        } 
+    }
+    componentDidUpdate(preProps, preState, snapshot)
+    {
+        console.warn("componentDidUpdate", preState, this.state.count, this.state.count)
+    }
+
+    render ()
+    {
+        // console.warn("render")
+       
+        return(
+            <div className='App'>
+                <h1>Component Did Update<br></br> </h1>
+                <button onClick={()=> {this.setState({count:1}) }}> Update Name</button>
+            </div>
+        );
+    }
+}
+export default App;
+
+// # Start File App.js with User.js 25.04.2024
+
+// LEC --------------- # 26   shouldComponentUpdate life cycle method
+
+
+
+import './App.css';
+import React from 'react';
+
+
+class App extends React.Component {
+    constructor()
+    {
+        super();  
+        
+        this.state = {
+            count: 0
+        } 
+    }
+    shouldComponentUpdate()
+    {
+        console.warn("should coumponent update ", this.state.count);
+        if (this.state.count > 5 && this.state.count < 10)
+        return true;
+    }
+
+    render ()
+    {
+        // console.warn("render")
+       
+        return(
+            <div className='App'>
+                <h1>shouldComponentUpdate {this.state.count} </h1>
+                <button onClick={()=> {this.setState({count: this.state.count+1}) }}> Update Name</button>
+            </div>
+        );
+    }
+}
+export default App;
+
+/ # Start File App.js with User.js 25.04.2024
+// LEC --------------- # 27   componentWillUnmount life cycle method
+
+import './App.css';
+import React from 'react';
+import Student from './Student';
+// student.js file works with this 
+class App extends React.Component {
+
+  constructor()
+  {
+    super();
+    this.state = {
+        show: true
+    }
+  }
+    render ()
+    {
+        return(
+            <div className='App'>
+
+<h1>componentWillUnmount life cycle method </h1>
+                {
+                    this.state.show ? <Student />: <h1> Chidl Component Removed </h1>
+                }
+                <button onClick={()=> this.setState({show: !this.state.show}) }> Toggle Child Component </button>
+            </div>
+        )
+    }
+}
+export default App;
+
+// student.js file 
+import React from "react";
+
+
+class Student extends React.Component{
+
+  componentWillUnmount() 
+  {
+    alert (" componentWillUnmount called ")
+  }
+  render()
+  {
+    return (
+      <div className='App'>
+        <h1> Student Component </h1>
+        <h2>Hello </h2>
+      </div>
+    )
+  };
+}
+  export default Student;
+
+  // ends 
+
+
+
+// LEC --------------# 28 Hooks in ReactJs
+
+// //--- with Hook we can use class components features
+//  in functional components such as State Life Cycle, pure components
+// // Hook is mentioned with the help of use when use us used it means
+import './App.css';
+import React, { useState, use } from 'react'
+
+
+function App() {
+
+  const [data, setData] = useState("Anil")
+
+  return (
+    <div className="App">
+      {/* // Below in h1 tag we will print count like this */}
+      <h1> {data} </h1>
+      <button onClick={() => setData("Sidhu")}> Update Name</button>
+    </div>
+  )
+}
+export default App;
+
+// # Start File App.js with User.js 26.04.2024
+// LEC --------------# 28 Hooks in ReactJs
+
+// //--- with Hook we can use class components features
+//  in functional components such as State Life Cycle, pure components
+// // Hook is mentioned with the help of use when use us used it means
+
+import './App.css';
+import React, { useState, useEffect } from 'react'; 
+function App() {
+    const [data, setData] = useState("Anil")
+    // all the life Cycle Methods are used in UseEffect 
+    return (
+        <div className='App'>
+            <h1> Hooks in React.Js </h1>
+            <h2> {data}</h2>
+            <button onClick={()=> setData ("Sidhu")}> Update Data </button>
+        </div>
+    )
+}
+export default App;
+
+
+
+
+
+// LEC --------------# 29 useEffect Hook in ReactJs
+
+
+im// # Start File App.js with User.js 26.04.2024
+// LEC --------------# 29 useEffect Hook in ReactJs
+
+
+// import './App.css';
+// import React, { useEffect, useState } from 'react'
+
+// // this button will count on every press
+// function App() {
+//   const [count, setCount] = useState(0)
+//   useEffect(() => {
+//     console.warn("useEffect")
+//   })
+//   return (
+//     <div className="App">
+//       <h1> useeffect in React{count} </h1>
+//       <button onClick={() => setCount(count + 1)}> Update Counter</button>
+//     </div>
+//   )
+// }
+// export default App;
+
+
+
+
+// ------------------------------------------------
+// this below will only run one time
+// this is good 26.04.2024
+
+import './App.css';
+import React, { useEffect, useState } from 'react'
+
+
+function App() {
+  const [count, setCount] = useState(100)
+  
+  useEffect( () => {
+    // alert("useEffect")
+    console.warn("useEffect")
+
+  })
+  return (
+    <div className="App">
+      <h1> useeffect in React: {count} </h1>
+      <button onClick={() => setCount(count + 5)}> Update Counter</button>
+    </div>
+  )
+}
+export default App;
+
+
+
+
+// # Start File App.js with User.js File 07.05.2024
+
+// LEC --------------#30 useEffect with condition | part 2 | like component did mount
+
+import './App.css'
+import React , {useEffect, useState } from 'react'
+import User from './User'
+function App(){
+
+  const [data, setData] = useState (10);
+  const [count, setCount] = useState (100);
+
+  return (
+    <div className='App'>
+  <User count={count} data= {data} />
+      <button onClick={()=> setData(data + 1 )}> update data </button>
+      <button onClick={()=> setCount(count + 1 )}> update Count </button>
+    </div>
+  );
+}
+export default App;
+
+
+
+
+// First try this 
+
+// import './App.css'
+// import React , {useEffect, useState } from 'react'
+
+// function App(){
+
+//   const [data, setData] = useState (10);
+//   const [count, setCount] = useState (100);
+
+//   useEffect (()=> {
+//     console.warn("called with Data state")
+//   }, [data])
+
+//   useEffect (()=> {
+//     alert("count is " + count)
+//   }, [count])
+
+//   return (
+//     <div className='App'>
+//       <h1>Data: {data} </h1>
+//       <h1>Count: {count} </h1>
+
+//       <button onClick={()=> setData(data + 1 )}> update data </button>
+//       <button onClick={()=> setCount(count + 1 )}> update Count </button>
+//     </div>
+//   );
+// }
+// export default App;
+
+
+// # Start File with  User.js 07.05.2024
+
+// LEC --------------#30 useEffect with condition | part 2 | like component did mount
+
+import './App.css'
+import React , {useEffect, useState } from 'react'
+
+function App(props){
+
+  useEffect (()=> {
+    alert("count. is ", +props.count)
+  }, [props.count, props.data])
+
+  return (
+    <div className='App'>
+      <h1>Count Props: {props.count} </h1>
+      <h1>Data Props: {props.data} </h1>
+
+      
+    </div>
+  );
+}
+export default App;
+
+
+
+
+
+
+// # Start File App.js  08.05.2024
+
+// LEC --------------#31 style in ReactJs
+
+import './App.css'; 
+import React from 'react';
+import './style.css';
+import style from './custom.module.css'
+
+function App(){
+  
+  return (
+    <div className='App'>
+{/* // Style 1 this is made with the help of file #style.css */}
+      <h1 className='primary'> Style type 1  in React Js</h1>
+
+{/* // Style 2 this is made with the help of file #style.css  */}
+{/* First brackets below are the property of JS and the double bracket is the property of object   */}
+      <h1 style={{color:'red', backgroundColor: "black"}}> Style type 2  in React Js</h1>
+    
+{/* // Style 3 this is made with the #custom.module.css file */}
+      <h1 className={style.success}> Style type 3  in React Js</h1>
+    </div>
+  )
+}
+
+export default App;
+
+
+----------------------custome.module.css
+
+.success {
+    color: goldenrod;
+    background-color: black;
+}
+
+
+-------------------------style.css
+
+.primary {
+    background-color: black;
+    color: green;
+}
+
+
+LEC # 32 -------------------------------------------------------------------------
+
+
+// # Start File App.js  08.05.2024
+
+// LEC -------------- #32 Install Bootstrap
+// bootstrap is a library of CSS and JS  library provide responsive website  
+// work both on phone and website 
+
+import './App.css'; 
+import React from 'react';
+import {Button, Alert} from 'react-bootstrap'
+
+
+
+function App(){
+
+return(
+  <div className='App'>
+    <h1> Install Bootstrap</h1>
+
+    <Button onClick={()=> alert("Hello") }>Click Me</Button>
+
+    <Button variant="primary">Primary</Button>{' '}
+      <Button variant="secondary">Secondary</Button>{' '}
+      <Button variant="success">Success</Button>{' '}
+      <Button variant="warning">Warning</Button>{' '}
+      <Button variant="danger">Danger</Button>{' '}
+      <Button variant="info">Info</Button>{' '}
+      <Button variant="light">Light</Button>{' '}
+      <Button variant="dark">Dark</Button>
+      <Button variant="link">Link</Button> 
+<br></br>
+<br></br>
+{/* // use below or above with only bracket  */}
+{
+        <Alert  variant= 'warning'>
+          This is a alert—check it out!
+        </Alert>
+      }
+
+  </div>
+);
+}
+export default App;
+
+
+// # Start File App.js  08.05.2024
+// LEC # 33 ------------------------------#33 Array Listing with Map function
+
+import './App.css'; 
+import React from 'react';
+import Student from './Student';
+
+function App(){
+//  const Students = ['Anil', 'Sindhu', 'Sam', 'Peter'];
+const students = [
+  {name : 'anil', email:'anil@test', contact:0o0}, 
+  {name : 'Sidhu', email:'Sidhu@test', contact:111}, 
+  {name : 'Sam', email:'sam@test', contact:222}
+]
+ // map looping
+//  Students.map((item)=> {
+//   console.warn("My name is ", item)
+//  }); 
+
+//  for (let i=0; i<Students.length; i++)
+//   {
+//     console.warn(" In for loop my Name is : ", Students[i])
+//   }
+return(
+  <div className='App'>
+    <h1>  Handle Array with List </h1>
+    {
+      students.map((data)=>
+        <h1>Name is : {data}</h1>
+     )
+    }
+  </div>
+);
+}
+export default App;
+
+
+
+
+// import './App.css'; 
+// import React from 'react';
+// import Student from './Student';
+
+// function App(){
+//  const Students = ['Anil', 'Sindhu', 'Sam', 'Peter'];
+//  // map looping
+// //  Students.map((item)=> {
+// //   console.warn("My name is ", item)
+// //  }); 
+
+// //  for (let i=0; i<Students.length; i++)
+// //   {
+// //     console.warn(" In for loop my Name is : ", Students[i])
+// //   }
+// return(
+//   <div className='App'>
+//     <h1>  Handle Array with List </h1>
+//     {
+//       Students.map((data)=>
+//         <h1>Name is : {data}</h1>
+//      )
+//     }
+//   </div>
+// );
+// }
+// export default App;
+
+
+// # Start File App.js  08.05.2024
+// LEC # 34 ----------------------------- #34 List with Bootstrap Table
+
+import './App.css'; 
+import React from 'react';
+// import Student from './Student';
+import {Table} from 'react-bootstrap'
+
+function App()
+{
+
+const users = 
+[
+  {name : 'Anil', email:'anil@test', contact:'111'},
+  {name : 'Ali', email:'ali@test', contact:'555'},
+  {name : 'David', email:'david@test', contact:'111'},
+  {name : 'Sam', email:'sam@test', contact:'333'}, 
+]
+
+return(
+  <div className='App'>
+    <h1>  List with Bootstrap Table  </h1>
+    <Table striped variant='dark' hover>
+      <tbody>
+        <tr>
+          <td>#</td>
+          <td>Name</td>
+          <td>Email</td>
+          <td>Contact</td>
+        </tr>
+         {
+          users.map((item, i)=>
+            item.contact === '111'?
+            <tr key={i}>
+              <td>{i}</td>
+              <td>{item.name}</td>
+              <td>{item.email}</td>
+              <td>{item.contact}</td>
+            </tr>:null
+    
+         )
+        }
+        </tbody>
+    </Table>
+  </div>
+);
+
+}
+export default App;
+
+
+
+
+
+// # Start File App.js  08.05.2024
+// LEC ----------------------------- #35 Nested List in ReactJs
+
+import './App.css'; 
+import React from 'react';
+// import Student from './Student';
+import {Table} from 'react-bootstrap'
+
+function App()
+{
+
+const users = [
+  {
+    name : 'Anil', email:'anil@test', address: [
+    {Hn:"10", city:'Noida', Country:'India'},
+    {Hn:"20", city:'Lahore', Country:'India'},
+    {Hn:"30", city:'multan', Country:'India'},
+    {Hn:"40", city:'Sahiwal', Country:'India'}, 
+  ] 
+},
+{
+  name : 'Burce', email:'burce@test', address: [
+  {Hn:"10", city:'Noida', Country:'India'},
+  {Hn:"20", city:'Lahore', Country:'India'},
+  {Hn:"30", city:'multan', Country:'India'},
+  {Hn:"40", city:'Sahiwal', Country:'India'}, 
+] 
+},
+{
+  name : 'peter', email:'peter@test', address: [
+  {Hn:"10", city:'Noida', Country:'India'},
+  {Hn:"20", city:'Lahore', Country:'India'},
+  {Hn:"30", city:'multan', Country:'India'},
+  {Hn:"40", city:'Sahiwal', Country:'India'}, 
+] 
+},
+{
+  name : 'Sam', email:'sam@test', address: [
+  {Hn:"10", city:'Noida', Country:'India'},
+  {Hn:"20", city:'Lahore', Country:'India'},
+  {Hn:"30", city:'multan', Country:'India'},
+  {Hn:"40", city:'Sahiwal', Country:'India'}, 
+] 
+},
+  
+]
+
+return(
+  <div className='App'>
+    <h1>  List with Bootstrap Table  </h1>
+    <Table striped variant='dark' hover>
+      <tbody>
+        <tr>
+          <td>#</td>
+          <td>Name</td>
+          <td>Email</td>
+          <td>Contact</td>
+        </tr>
+         {
+          users.map((item, i)=>
+            item.contact === '111'?
+            <tr key={i}>
+              <td>{i}</td>
+              <td>{item.name}</td>
+              <td>{item.email}</td>
+              <td>{item.contact}</td>
+            </tr>:null
+    
+         )
+        }
+        </tbody>
+    </Table>
+  </div>
+);
+
+}
+export default App;
+
+
+
+
+// # Start File App.js  13.05.2024 along with user.js file
+// LEC ----------------------------- #36 Reuse component in loop
+
+import './App.css'; 
+import React from 'react';
+import User from './User';
+
+function App()
+{
+
+const users = [
+  {
+    name : 'Anil', email:'anil@test', contact: "111" 
+  },
+  {
+    name : 'Burce', email:'burce@test', address: "222"
+  },
+  {
+    name : 'peter', email:'peter@test', address: "333" 
+  },
+  {
+  name : 'Sam', email:'sam@test', address: "444"
+},
+]
+
+return(
+  <div className='App'>
+    <h1>  Reuse Component with list   </h1>
+    {/* <User/> */}
+    {
+      users.map((item, i)=>
+        <User data = {item}/> 
+      )
+    }
+  </div>
+);
+
+}
+export default App;
+
+
+// # Start File with  User.js 13.05.2024
+
+// LEC --------------#36 Reuse component in loop
+
+
+function User (props){
+
+  return(
+    // <h1> User {props.data.name}</h1>
+
+   <div>
+     <span> {props.data.name}</span>
+     <span> {props.data.email}</span>
+     <span> {props.data.address}</span>
+   </div>
+
+  )
+ 
+}
+export default User;
+
+
+
+// # Start File App.js  08.05.2024 along with coloums.js
+// LEC ----------------------------- #37 fragment in ReactJs
+
+import './App.css'; 
+import React from 'react';
+import Cols from './Cols';
+import { Fragment } from 'react';
+
+function App()
+{
+return(
+  <div>
+    <h1>  React Fragment </h1>
+    
+    <table>
+      <tbody>
+        <tr>
+          <Cols/>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+);
+
+}
+export default App;
+
+// # Start File with  Cols.js 13.05.2024
+
+// LEC --------------#37 fragment in ReactJs
+
+
+function Cols()
+
+{
+    return (
+        <>
+            <td>Anil </td>
+            <td>Sidhu</td>
+        </>
+    )
+}
+export default Cols;
+
+
+
+
+// # Start File with  User.js 13.05.2024
+// LEC --------------#38 Send Data Child to Parent Component
+
+
+function User (props){
+  // we can send any type of thing to parent class as data name, email, list , object 
+const data = "Anil Sindhu" 
+  return(
+   <div>
+     <h1> User  Name </h1>
+     <button onClick={()=> props.alert(data)}>Click Me</button>
+   </div>
+  )
+}
+export default User;
+
+
+// function User (props){
+//   // through this below code the data moved from parent App.js file to child class that is User.js 
+//     return(
+//      <div>
+//        <h1> User  Name : {props.name}</h1>
+//        <button>Click Me</button>
+//      </div>
+//     )
+//   }
+//   export default User;
+
+
+
+// # Start File with  User.js 13.05.2024
+// LEC --------------#38 Send Data Child to Parent Component
+function User (props){
+  // we can send any type of thing to parent class as data name, email, list , object 
+const data = "Anil Sindhu" 
+  return(
+   <div>
+     <h1> User  Name </h1>
+     <button onClick={()=> props.alert(data)}>Click Me</button>
+   </div>
+  )
+}
+export default User;
+
+// function User (props){
+//   // through this below code the data moved from parent App.js file to child class that is User.js 
+//     return(
+//      <div>
+//        <h1> User  Name : {props.name}</h1>
+//        <button>Click Me</button>
+//      </div>
+//     )
+//   }
+//   export default User;
+
+
+
+// # Start File App.js  14.05.2024
+// LEC ----------------------------- #39 Pure component in ReactJs
+
+import './App.css'; 
+import React, {PureComponent} from 'react';
+import User from './User';
+class App extends PureComponent{
+  constructor()
+  {
+    super();
+    this.state={
+      count: 1
+    }
+  }
+
+  render()
+  {
+    return( 
+      <div className='App'>
+        <User count = {this.state.count}/>
+        <button onClick={()=>this.setState({count: this.state.count +1})}>Update Count</button>
+        </div>
+      );
+    }
+  }
+export default App;
+
+
+// # Start File User.js  14.05.2024 along with App.js file 
+// LEC ----------------------------- #39 Pure component in ReactJs
+
+import './App.css'; 
+import React, {PureComponent} from 'react';
+class App extends PureComponent{
+
+
+  render()
+  {
+    console.warn("User component check-rerendering")
+    return( 
+      <div className='App'>
+        <h1> User Component {this.props.count}</h1>
+        </div>
+      );
+    }
+  }
+export default App;
+
+
+// # Start File App.js  14.05.2024
+// LEC -----------------------------  #40 useMemo Hook
+
+import './App.css'; 
+import React, {PureComponent} from 'react';
+import User from './User';
+class App extends PureComponent{
+  constructor()
+  {
+    super();
+    this.state={
+      count: 1
+    }
+  }
+
+  render() 
+  {
+    return( 
+      <div className='App'>
+        <User count = {this.state.count}/>
+        <button onClick={()=>this.setState({count: this.state.count +1})}>Update Count</button>
+        </div>
+      );
+    }
+  }
+export default App;
+
+// # Start File App.js  146.05.2024
+// LEC -----------------------------  #44 Controlled Component
+
+import './App.css'; 
+import React, {useState} from 'react';
+import User from './User';
+function App (){
+  let [val, setVal] = useState ("")
+  let [data, setData] = useState ("555")
+  return( 
+      <div className='App'>
+        <h1>Controlled Component </h1>
+        {/* // only one of these  value ={val} or defaultValue will be seen in hte input field. */}
+        <input type="text"  defaultValue= "222" onChange={(e)=> setVal(e.target.value)}/> 
+        <input type="text"  value={data} onChange={(e)=> setData (e.target.value) }/>
+        <h1>Value : {val}</h1>
+        <h2>Data : {data}</h2>
+        </div>
+      );
+  
+  }
+export default App;
+
+
+
+// # Start File App.js  17.05.2024
+// LEC -----------------------------   #45 Uncontrolled Component
+
+import "./App.css";
+import React, { useRef } from "react";
+function App() {
+  let inputRef = useRef(null);
+  let inputRef2 = useRef(null);
+
+  function submitForm(e) {
+    e.preventDefault();
+    console.warn("Input field 1 value :", inputRef.current.value);
+    console.warn("Input fiedl 2 value", inputRef2.current.value);
+    let input3 = document.getElementById("input3").value;
+    console.warn("input field 3 value: ", input3);
+  }
+
+  return (
+    <div className="App">
+      <h1> Uncontrolled Component </h1>
+
+      <form onSubmit={submitForm}>
+        <input ref={inputRef} type="text" /> <br /> <br />
+        <input ref={inputRef2} type="text" /> <br /> <br />
+        <input id="input3" type="text" /> <br /> <br />
+        <button> Submit </button>
+      </form>
+    </div>
+  );
+}
+export default App;
+
+
+// # Start File App.js  19.05.2024
+// LEC -----------------------------   React Router v6 tutorial in Hindi 1# getting started | installation
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./App.css";
+import Home from "./component/Home";
+import About from "./component/About";
+// import { Component } from "react";
+function App() {
+  return (
+    <div className="App">
+      <BrowserRouter>
+        <Routes>
+          {/* <Route path="/home" element={<h1> Home Page</h1>} /> */}
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
+  );
+}
+export default App;
+
+
+// # Start File App.js  22.05.2024
+// LEC -----------------------------   # 50 Dynamic Reac Routing
+
+import "./App.css";
+import React from "react";
+import { BrowserRouter as Router, Link, Route } from "react-router-dom";
+
+function App() {
+  let users = [
+    { id: 1, name: "anil", email: "anil@test.com" },
+    { id: 2, name: "sam", email: "sam@test.com" },
+    { id: 3, name: "peter", email: "peter@test.com" },
+    { id: 4, name: "bruce", email: "bruce@test.com" },
+    { id: 5, name: "tony", email: "tony@test.com" },
+  ];
+  return (
+    <div className="App">
+      <Router>
+        <h1> React Dynamic Routing </h1>
+
+        {users.map((item) => (
+          <div>
+            <Link to={"/user" + item.id}>
+              <h3>{item.name}</h3>
+            </Link>
+          </div>
+        ))}
+      </Router>
+    </div>
+  );
+}
+export default App;
+
+[
+    {
+      "id": 1,
+      "name": "Leanne Graham",
+      "username": "Bret",
+      "email": "Sincere@april.biz"
+    },
+    {
+      "id": 2,
+      "name": "Ervin Howell",
+      "username": "Antonette",
+      "email": "Shanna@melissa.tv"
+    },
+    {
+      "id": 3,
+      "name": "Clementine Bauch",
+      "username": "Samantha",
+      "email": "Nathan@yesenia.net"
+    },
+    {
+      "id": 4,
+      "name": "Patricia Lebsack",
+      "username": "Karianne",
+      "email": "Julianne.OConner@kory.org"
+    },
+    {
+      "id": 5,
+      "name": "Chelsey Dietrich",
+      "username": "Kamren",
+      "email": "Lucio_Hettinger@annie.ca"
+    },
+    {
+      "id": 6,
+      "name": "Mrs. Dennis Schulist",
+      "username": "Leopoldo_Corkery",
+      "email": "Karley_Dach@jasper.info"
+    },
+    {
+      "id": 7,
+      "name": "Kurtis Weissnat",
+      "username": "Elwyn.Skiles",
+      "email": "Telly.Hoeger@billy.biz"
+    },
+    {
+      "id": 8,
+      "name": "Nicholas Runolfsdottir V",
+      "username": "Maxime_Nienow",
+      "email": "Sherwood@rosamond.me"
+    },
+    {
+      "id": 9,
+      "name": "Glenna Reichert",
+      "username": "Delphine",
+      "email": "Chaim_McDermott@dana.io"
+    },
+    {
+      "id": 10,
+      "name": "Clementina DuBuque",
+      "username": "Moriah.Stanton",
+      "email": "Rey.Padberg@karina.biz"
+    }
+  ]

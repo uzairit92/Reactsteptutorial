@@ -1,0 +1,59 @@
+
+lec # 3 
+what is npm 
+npm install package -- 
+code spaces and build in one singel fiel and also give security 
+is there any alternate of npm 
+node package manager 
+
+yarn is the alternative of npm
+
+react current version 
+
+--- can we use state out of component , No we cannot use state out of component. 
+
+--- State is publie or private = state is public
+
+
+--- can we use useState in class component , ans "NO"
+
+
+#8
+
+can we make function in a function  
+function can be made in a function 
+But these function can not be used outside the functions like others 
+
+
+we can use Jsx function without React 
+
+Can we use state outside component, No we can not use its not 
+
+state is public / private , its public. 
+
+
+can we send HTML in Prop 
+yes we can send prop in HTML
+
+
+was in jequery and react we use same thing for hide  and show 
+
+
+LEc 17 - How to disable a state with button and without button
+
+
+LEC - 20 why we pass props function as props. we can take props in any place in function 
+
+LEC - 21 --- 
+
+LEC - 26 can we call componentdidUpdate an API 
+Question which call first shouldcomponentupdate  or componentdidUpdate
+
+LEC - 28 can we use hooks in class component as we are using in function 
+
+
+super Child component to super child component can also work 
+
+
+
+Lec - 45 if some fields  in a componant  use by controlled and some with usestate what is this componant is called. 
